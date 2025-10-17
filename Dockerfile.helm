@@ -10,7 +10,7 @@ RUN if [ "$sdkVersion" != "main" ]; then gitBranch="v$sdkVersion"; else gitBranc
 # Set the working directory to the cloned repository
 WORKDIR /app
 
-ENV ENV_BACKEND_URL=https://beta.hyperswitch.io/api
+ENV ENV_BACKEND_URL=http://localhost:8080
 # Install dependencies and build the project
 RUN npm_config_ignore_scripts=true npm install
 RUN git submodule update --init --recursive
