@@ -14,7 +14,8 @@ let getApiEndPoint = (~publishableKey="", ~isConfirmCall=false) => {
   | Some(str) => str
   | None =>
     let backendEndPoint = isConfirmCall ? GlobalVars.confirmEndPoint : GlobalVars.backendEndPoint
-    GlobalVars.isProd && testMode ? "https://beta.hyperswitch.io/api" : backendEndPoint
+    //GlobalVars.isProd && testMode ? "https://beta.hyperswitch.io/api" : backendEndPoint
+    backendEndPoint
   }
 }
 
